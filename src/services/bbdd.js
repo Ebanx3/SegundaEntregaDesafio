@@ -1,8 +1,7 @@
 import mongoose from 'mongoose';
+import 'dotenv/config'
 
-const username = 'ebanx3';
-const password = 'inssko4MuRwslWFO';
-const connectionString = `mongodb+srv://${username}:${password}@cluster0.jhein.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+const connectionString = process.env.MONGO_ATLAS;
 
 export const connectToMongoAtlas = async () => {
     try{
