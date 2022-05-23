@@ -4,7 +4,7 @@ import app from './services/server';
 const init = async () => {
     await connectToMongoAtlas();
 
-    const port = 8080;
+    const port = process.env.PORT;
     app.listen(port,()=> console.log('Listening at port', port));
 }
 
